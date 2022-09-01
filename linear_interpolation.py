@@ -1,5 +1,3 @@
-print("wow")
-prinr("Banana")
 
 # By submitting this assignment, I agree to the following:
 # “Aggies do not lie, cheat, or steal, or tolerate those who do”
