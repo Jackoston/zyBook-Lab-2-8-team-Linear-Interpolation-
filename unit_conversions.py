@@ -31,7 +31,9 @@ btu_hour = x * 3.41
 print(f'The BTU/h is {btu_hour:.2f}')
 
 #E
-
+liters_to_gallons = (float(x * 15.850323141489))
+final_liters_to_gallons = (f'{x} liters per second is equivalent to {liters_to_gallons:.2f} US gallons per minute')
+print(final_liters_to_gallons)
 
 #F
 degrees_fahrenheit = float((x * 1.8) + 32)
