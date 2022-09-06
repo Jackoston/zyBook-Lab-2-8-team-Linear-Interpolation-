@@ -14,7 +14,7 @@ x=float(input("Please enter the quantity to be converted:" ))
 
 #A
 pound_to_newtons=x*4.44822
-print(f"{x:.2f}pounds force is equivalent to {pound_to_newtons:.2f}Newtons")
+print(f"{x:.2f} pounds force is equivalent to {pound_to_newtons:.2f} Newtons")
 
 #B
 meters_to_feet = (float(x * 3.28084))
