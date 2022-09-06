@@ -8,25 +8,31 @@
 # Eddy
 # Reed
 # Section: 568
-# Assignment: 2-8
-# Date: 30 August 2022
+# Assignment: 3-15 Unit Conversions Lab
+# Date: 6 September 2022
 
 x=float(input("Please enter the quantity to be converted:" ))
-#The following converts Pounds (force) to Newton
+
+#A
 pound_to_newtons=x*4.44822
 print(f"{x:.2f}pounds force is equivalent to {pound_to_newtons:.2f}Newtons")
 
-#The following converts meters to feet
+#B
 meters_to_feet = (float(x * 3.28084))
 final_meters_to_feet = (f'{x} meters is equivalent to {meters_to_feet:.2f} feet')
 print(final_meters_to_feet)
 
-#The following converts Atmospheres to kilopascals (kPa)
+#C
 atmosphere_to_kilopascal= x*101.325
 print(f'{x:.2f} atmospheres is equivalent to {atmosphere_to_kilopascal:.2f} kilopascals')
 
-#The following converts Watts to BTU per hour
-# 1 watt is 3.41 BTU/h
+#D
 btu_hour = x * 3.41
 print(f'The BTU/h is {btu_hour:.2f}')
 
+#E
+
+
+#F
+degrees_fahrenheit = float((x * 1.8) + 32)
+print(str(x) + ' degrees is equivalent to ' + str(degrees_fahrenheit) + ' degrees')
