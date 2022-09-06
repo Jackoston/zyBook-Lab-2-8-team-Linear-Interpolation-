@@ -13,7 +13,7 @@
 
 x=float(input("Please enter the quantity to be converted:" ))
 pound_to_newtons=x*4.44822
-print(x,"pounds force is equivalent to",pound_to_newtons,"Newtons")
+print(f"{x:.2f}pounds force is equivalent to {pound_to_newtons:.2f}Newtons")
 
 
 # 1 watt is 3.41 BTU/h
