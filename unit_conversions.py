@@ -23,7 +23,6 @@ btu_hour = x * 3.41
 print(f'The BTU/h is {btu_hour:.2f}')
 
 meters_to_feet = (float(x * 3.28084))
-final_meters_to_feet = (f'{x:.2f} meters is equivalent to {meters_to_feet:.2f} feet')
+final_meters_to_feet = (f'{x} meters is equivalent to {meters_to_feet:.2f} feet')
 print(final_meters_to_feet)
-
 
