@@ -11,8 +11,8 @@
 # Assignment: 2-8
 # Date: 30 August 2022
 
-#The following converts Pounds (force) to Newton
 x=float(input("Please enter the quantity to be converted:" ))
+#The following converts Pounds (force) to Newton
 pound_to_newtons=x*4.44822
 print(f"{x:.2f}pounds force is equivalent to {pound_to_newtons:.2f}Newtons")
 
