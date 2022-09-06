@@ -10,6 +10,14 @@
 # Section: 568
 # Assignment: 2-8
 # Date: 30 August 2022
+
 x=float(input("Please enter the quantity to be converted:" ))
 pound_to_newtons=x*4.44822
 print(x,"pounds force is equivalent to",pound_to_newtons,"Newtons")
+
+
+# 1 watt is 3.41 BTU/h
+watts = float(input('Please enter watts to be converted: '))
+btu_hour = watts * 3.41
+print(f'The BTU/h is {btu_hour}')
+
