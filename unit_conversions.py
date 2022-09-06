@@ -16,6 +16,11 @@ x=float(input("Please enter the quantity to be converted:" ))
 pound_to_newtons=x*4.44822
 print(f"{x:.2f}pounds force is equivalent to {pound_to_newtons:.2f}Newtons")
 
+#The following converts meters to feet
+meters_to_feet = (float(x * 3.28084))
+final_meters_to_feet = (f'{x} meters is equivalent to {meters_to_feet:.2f} feet')
+print(final_meters_to_feet)
+
 #The following converts Atmospheres to kilopascals (kPa)
 atmosphere_to_kilopascal= x*101.325
 print(f'{x:.2f} atmospheres is equivalent to {atmosphere_to_kilopascal:.2f} kilopascals')
@@ -24,9 +29,4 @@ print(f'{x:.2f} atmospheres is equivalent to {atmosphere_to_kilopascal:.2f} kilo
 # 1 watt is 3.41 BTU/h
 btu_hour = x * 3.41
 print(f'The BTU/h is {btu_hour:.2f}')
-
-#The following converts meters to feet
-meters_to_feet = (float(x * 3.28084))
-final_meters_to_feet = (f'{x} meters is equivalent to {meters_to_feet:.2f} feet')
-print(final_meters_to_feet)
 
