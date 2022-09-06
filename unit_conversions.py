@@ -9,5 +9,7 @@
 # Reed
 # Section: 568
 # Assignment: 2-8
-# Date: 06 September 2022
-
+# Date: 30 August 2022
+x=float(input("Please enter the quantity to be converted:" ))
+pound_to_newtons=x*4.44822
+print(x,"pounds force is equivalent to",pound_to_newtons,"Newtons")
