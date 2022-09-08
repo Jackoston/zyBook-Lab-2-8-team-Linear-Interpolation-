@@ -11,30 +11,37 @@
 # Date: 8 September 2022
 from math import sqrt
 
-time1 = int(input("Enter time 1:"))
-pos_x1 = input("Enter the x position of the object at time 1:")
-pos_y1 = input("Enter the y position of the object at time 1:")
-pos_z1 = input("Enter the z position of the object at time 1:")
+time1 = float(input("Enter time 1:"))
+print()
+pos_x1 = float(input("Enter the x position of the object at time 1:"))
+print()
+pos_y1 = float(input("Enter the y position of the object at time 1:"))
+print()
+pos_z1 = float(input("Enter the z position of the object at time 1:"))
+print()
 
-time2 = int(input("Enter time 2:"))
-pos_x2 = input("Enter the x position of the object at time 2:")
-pos_y2 = input("Enter the y position of the object at time 2:")
-pos_z2 = input("Enter the z position of the object at time 2:")
+time2 = float(input("Enter time 2:"))
+print()
+pos_x2 = float(input("Enter the x position of the object at time 2:"))
+print()
+pos_y2 = float(input("Enter the y position of the object at time 2:"))
+print()
+pos_z2 = float(input("Enter the z position of the object at time 2:"))
+print()
 
 time_interval = (time2 - time1) / 4
 time_distance_1 = time1 + time_interval
 time_distance_2 = time_distance_1 + time_interval
 time_distance_3 = time_distance_2 + time_interval
 
-CHANGE_IN_TIME = 0
 CHANGE_IN_X = 0
 CHANGE_IN_Y = 0
 CHANGE_IN_Z = 0
 
 #new_x2 = x2 + (t2 - t2) * ((x2 - x1) / (t2 - t1))
 
-print(f"At time ",{time1},"seconds the object is at ("")")
-print(f"At time ",{time_distance_1},"seconds the object is at ("")")
-print(f"At time ",{time_distance_2},"seconds the object is at ("")")
-print(f"At time ",{time_distance_3},"seconds the object is at ("")")
-print(f"At time ",{time2},"seconds the object is at ("")")
+print(f"At time {time1:.2f} seconds the object is at ("")")
+print(f"At time {time_distance_1:.2f} seconds the object is at ("")")
+print(f"At time {time_distance_2:.2f}seconds the object is at ("")")
+print(f"At time {time_distance_3:.2f}seconds the object is at ("")")
+print(f"At time {time2:.2f}seconds the object is at ("")")
