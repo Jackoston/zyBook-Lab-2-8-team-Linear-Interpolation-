@@ -34,11 +34,13 @@ time_distance_1 = time1 + time_interval
 time_distance_2 = time_distance_1 + time_interval
 time_distance_3 = time_distance_2 + time_interval
 
+CHANGE_IN_TIME = 0
 CHANGE_IN_X = 0
 CHANGE_IN_Y = 0
 CHANGE_IN_Z = 0
 
-#new_x2 = x2 + (t2 - t2) * ((x2 - x1) / (t2 - t1))
+new_y1 = pos_y1 + (time_distance_1 - time1) * ((pos_y2 - pos_y1) / (time2 - time1))
+print(new_y1)
 
 print(f"At time {time1:.2f} seconds the object is at ("")")
 print(f"At time {time_distance_1:.2f} seconds the object is at ("")")
