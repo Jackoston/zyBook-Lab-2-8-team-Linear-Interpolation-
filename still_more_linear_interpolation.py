@@ -10,6 +10,8 @@
 # Assignment:  Lab 3 - 16 (Team): Still More Linear Interpolation
 # Date: 8 Sep. 2022
 
+#Sup
+
 # 1st Variables:
 t1 = float(input('Enter time 1: '))  # x1
 x1 = float(input('Enter the x position of the object at time 1: '))  # y1
