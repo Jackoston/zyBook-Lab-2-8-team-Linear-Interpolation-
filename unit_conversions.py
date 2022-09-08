@@ -26,8 +26,8 @@ atmosphere_to_kilopascal= x*101.325
 print(f'{x:.2f} atmospheres is equivalent to {atmosphere_to_kilopascal:.2f} kilopascals')
 
 #D
-btu_hour = x * 3.41
-print(f'{x:.2f} The BTU/h is {btu_hour:.2f}')
+btu_hour = x * 3.412141633
+print(f'{x:.2f} watts is equivalent to {btu_hour:.2f} BTU per hour')
 
 #E
 liters_to_gallons = (float(x * 15.850323141489))
@@ -35,5 +35,5 @@ final_liters_to_gallons = (f'{x:.2f} liters per second is equivalent to {liters_
 print(final_liters_to_gallons)
 
 #F
-degrees_fahrenheit = float((x * 1.8) + 32)
-print(f'{x:.2f} degrees is equivalent to {degrees_fahrenheit:.2f} degrees')
+degrees_fahrenheit = float((x * 1.8) + 32)still_more_linear_interpolation.py
+print(f'{x:.2f} degrees Celsius is equivalent to {degrees_fahrenheit:.2f} degrees Fahrenheit')
