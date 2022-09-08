@@ -18,3 +18,10 @@ time2=input("Enter time 2:")
 pos_x2=input("Enter the x position of the object at time 2:")
 pos_y2=input("Enter the y position of the object at time 2:")
 pos_z2=input("Enter the z position of the object at time 2:")
+
+
+CHANGE_IN_TIME=0
+CHANGE_IN_X=0
+CHANGE_IN_Y=0
+CHANGE_IN_Z=0
+
