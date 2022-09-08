@@ -31,3 +31,4 @@ CHANGE_IN_X = 0
 CHANGE_IN_Y = 0
 CHANGE_IN_Z = 0
 
+#new_x2 = x2 + (t2 - t2) * ((x2 - x1) / (t2 - t1))
