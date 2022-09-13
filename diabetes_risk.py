@@ -46,6 +46,11 @@ else:
     BMI = 2.518
 if smoker_input.upper()=="Y":
     smoke=0.855;
+    
+if steroids_input.upper() == "Y":
+    steroids = 2.191
+else:
+    steroids = 0
 
 #Calculations
 #n = 6.322 + sex – (0.063 * age) – BMI – hypertension – steroids – smoker – history
