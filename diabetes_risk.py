@@ -44,9 +44,14 @@ elif 27.5 <= BMI_input < 30:
     BMI = 1.97
 else:
     BMI = 2.518
-if smoker_input.upper()=="Y":
-    smoke=0.855;
 
+#Smoker ifs
+if Did_Smoke_input.upper() == "N":
+    smoke = 0
+elif smoker_input.upper() == "Y":
+    smoker = 0.855
+else:
+    smoker = 0.218
 #Calculations
 #n = 6.322 + sex – (0.063 * age) – BMI – hypertension – steroids – smoker – history
 
