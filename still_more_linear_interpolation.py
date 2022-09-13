@@ -24,7 +24,7 @@ x2 = float(input('Enter the x position of the object at time 2: '))  # y2
 y2 = float(input('Enter the y position of the object at time 2: '))  # y2
 z2 = float(input('Enter the z position of the object at time 2: '))  # y2
 
-# Space:
+#Space:
 print('')
 
 # Time Calculations:
@@ -46,7 +46,7 @@ new_y2 = y1 + (t_dist1 - t1) * ((y2 - y1) / (t2 - t1))
 new_z2 = z1 + (t_dist1 - t1) * ((z2 - z1) / (t2 - t1))
 print(f'At time {t_dist1:.2f} seconds the object is at ({new_x2:.3f}, {new_y2:.3f}, {new_z2:.3f})')
 
-# 3nd
+#3nd
 new_x2 = x1 + (t_dist2 - t1) * ((x2 - x1) / (t2 - t1))
 new_y2 = y1 + (t_dist2 - t1) * ((y2 - y1) / (t2 - t1))
 new_z2 = z1 + (t_dist2 - t1) * ((z2 - z1) / (t2 - t1))
