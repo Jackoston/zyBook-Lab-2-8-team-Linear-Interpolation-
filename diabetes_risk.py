@@ -12,11 +12,12 @@
 # Date: 13 September 2022
 
 sex_input=input("Enter your sex(M/F):")
-age_input=input("Enter your age (years):")
+age=int(input("Enter your age (years):"))
 BMI_input=input("Enter your BMI:")
 hypertension_input =input("Are you on medication for hypertension (Y/N)?")
 steroids_input =input("Are you on steroids (Y/N)?")
-smoker_input= input("Did you used to smoke (Y/N)?")
+smoker_input=input("Do you smoke cigarettes (Y/N)?")
+Did_Smoke_input= input("Did you used to smoke (Y/N)?")
 history_input=input("Do you have a family history of diabetes (Y/N)?")
 
 # Variable inputs
@@ -29,24 +30,25 @@ history_input=input("Do you have a family history of diabetes (Y/N)?")
 #asign variable to number for equation
 
 # sex ifs
-if upper.sex_input == 'M':
+if sex_input.upper() == 'M':
     sex = 0
-elif upper.sex_input == 'F':
+elif sex_input.upper() == 'F':
     sex = 0.879
 
 #BMI ifs
-if BMI_input < 25
+if BMI_input < 25:
     BMI = 0
 elif 25 <= BMI_input <27.5:
     BMI = 0.699
-elif 27.5 <= BMI_input < 30
+elif 27.5 <= BMI_input < 30:
     BMI = 1.97
 else:
     BMI = 2.518
-
+if smoker_input.upper()=="Y":
+    smoke=0.855;
 
 #Calculations
-n = 6.322 + sex – (0.063 * age) – BMI – hypertension – steroids – smoker – history
+#n = 6.322 + sex – (0.063 * age) – BMI – hypertension – steroids – smoker – history
 
 
 
