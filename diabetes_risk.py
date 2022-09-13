@@ -44,6 +44,12 @@ elif 27.5 <= BMI_input < 30:
     BMI = 1.97
 else:
     BMI = 2.518
+    
+#Steroid ifs
+if steroids_input.upper() == "Y":
+    steroids = 2.191
+else:
+    steroids = 0
 
 #Smoker ifs
 if Did_Smoke_input.upper() == "N":
