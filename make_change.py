@@ -43,4 +43,26 @@ change = change - dollar * 1
 quarter = change//.25
 change = change-quarter*.25
 
+dime = change//.10
+change = change-quarter*.10
 
+nickel = change//.05
+change = change-nickel*.05
+
+penny = change//.01
+change = change-penny*.01
+
+
+if dollar != 0:
+    if dollar > 1:
+        print(dollar, "dollars")
+    else:
+        print(dollar,"dollar")
+if quarter != 0:
+    print(quarter,"quarter")
+if dime != 0:
+    print()
+if nickel != 0:
+    print()
+if penny != 0:
+    print()
