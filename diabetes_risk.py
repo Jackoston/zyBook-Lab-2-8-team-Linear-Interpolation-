@@ -58,6 +58,19 @@ elif smoker_input.upper() == "Y":
     smoker = 0.855
 else:
     smoker = 0.218
+    
+# Family History Ifs:
+if history_input.upper() == 'Y':
+    family_input = ('Do any of your parents have a history of diabetes (Y/N)? ')
+    sibling_input = ('Do any of your siblings have a histroy of diabetes (Y/N)? ')
+
+if family_input.upper() == 'Y' and siblings_input == 'Y':
+    history = 0.753
+else:
+    history = 0.728
+
+if history_input.upper() == 'N':
+    history = 0
 
 # Calculations
 n = 6.322 + sex - (0.063 * age) - BMI - hypertension - steroids - smoker - history
