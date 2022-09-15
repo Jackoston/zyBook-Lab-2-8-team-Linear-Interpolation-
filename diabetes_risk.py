@@ -14,13 +14,11 @@ from math import e
 
 # Variable Inputs:
 sex_input = input("Enter your sex (M/F): ")
-age = int(input("Enter your age (Years): "))
+age = int(input("Enter your age (years): "))
 BMI_input = float(input("Enter your BMI: "))
 hypertension_input = input("Are you on medication for hypertension (Y/N)? ")
 steroids_input = input("Are you on steroids (Y/N)? ")
 smoker_input = input("Do you smoke cigarettes (Y/N)? ")
-Did_Smoke_input = input("Did you used to smoke (Y/N)? ")
-history_input = input("Do you have a family history of diabetes (Y/N)? ")
 
 # Assign Variables w/ Number For Equation:
 
@@ -53,26 +51,27 @@ else:
     steroids = 0
 
 # Smoker Ifs:
-if Did_Smoke_input.upper() == "N":
-    smoker = 0
+if smoker_input.upper() == "N":
+    did_smoke_input = input("Did you used to smoke (Y/N)? ")
+    if did_smoke_input.upper() == 'N':
+        smoker = 0
+    elif did_smoke_input.upper() == 'Y':
+        smoker = -0.218
 elif smoker_input.upper() == "Y":
     smoker = 0.855
-else:
-    smoker = 0.218
 
 # Family History Ifs:
+history_input = input("Do you have a family history of diabetes (Y/N)? ")
 if history_input.upper() == 'Y':
-    family_input = ('Do any of your parents have a history of diabetes (Y/N)? ')
-    siblings_input = ('Do any of your siblings have a histroy of diabetes (Y/N)? ')
-    if family_input.upper() == 'Y' and siblings_input == 'Y':
+    both_input = ('Both parent and sibling (Y/N)? ')
+    if both_input == 'Y':
         history = 0.753
-    elif family_input.upper() == 'Y' or siblings_input == 'Y':
+    else:
         history = 0.728
-
-if history_input.upper() == 'N':
+elif history_input.upper() == 'N':
     history = 0
 
 # Calculations & Printing:
 n = 6.322 + sex - (0.063 * age) - BMI - hypertension - steroids - smoker - history
 risk = 100 / (1 + e ** n)
-print(f"Your risk of developing type-2 diabetes {risk:.1f}%")
+print(f"Your risk of developing type-2 diabetes is {risk:.1f}%")
