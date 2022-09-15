@@ -27,4 +27,15 @@ change = change-dollar*1
 quarter = change//.25
 change = change-quarter*.25
 
+dime = change//.10
+change = change-quarter*.10
 
+nickel = change//.05
+change = change-nickel*.05
+
+penny = change//.01
+change = change-penny*.01
+
+
+if dollar == 0:
+    #2
