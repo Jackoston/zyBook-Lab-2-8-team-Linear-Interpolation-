@@ -13,64 +13,63 @@
 from math import e
 
 # Variable inputs
-sex_input = input("Enter your sex(M/F):")
-age = int(input("Enter your age (years):"))
-BMI_input = float(input("Enter your BMI:"))
-hypertension_input = input("Are you on medication for hypertension (Y/N)?")
-steroids_input = input("Are you on steroids (Y/N)?")
-smoker_input = input("Do you smoke cigarettes (Y/N)?")
-Did_Smoke_input = input("Did you used to smoke (Y/N)?")
-history_input = input("Do you have a family history of diabetes (Y/N)?")
+sex_input = input("Enter your sex(M/F): \n")
+age = int(input("Enter your age (years): \n"))
+BMI_input = float(input("Enter your BMI: \n"))
+hypertension_input = input("Are you on medication for hypertension (Y/N)? \n")
+steroids_input = input("Are you on steroids (Y/N)? \n")
+smoker_input = input("Do you smoke cigarettes (Y/N)? \n")
+if smoker_input.upper() == 'N':
+    Did_Smoke_input = input("Did you used to smoke (Y/N)? \n")
+
+history_input = input("Do you have a family history of diabetes (Y/N)? \n")
 
 # assign variable to number for equation
 
 # sex ifs
-if sex_input.upper() == 'M':
+if sex_input.upper() == 'M':  # male
     sex = 0
-elif sex_input.upper() == 'F':
+elif sex_input.upper() == 'F':  # female
     sex = 0.879
 
 # BMI ifs
-if BMI_input < 25:
+if BMI_input < 25:  # under 25
     BMI = 0
-elif 25 <= BMI_input < 27.5:
+elif 25 <= BMI_input < 27.5:  # between 25 and 27.5
     BMI = 0.699
-elif 27.5 <= BMI_input < 30:
+elif 27.5 <= BMI_input < 30:  # between 27.5 and 30
     BMI = 1.97
-else:
+else:   # over 30
     BMI = 2.518
 
 # Hypertension meds ifs
-if hypertension_input.upper() == 'Y':
+if hypertension_input.upper() == 'Y':   # on meds
     hypertension = 1.222
-else:
+else:   # no meds
     hypertension = 0
 
 # steroid meds ifs
-if steroids_input.upper() == "Y":
+if steroids_input.upper() == "Y":   # on steroids
     steroids = 2.191
-else:
+else:   # no steroids
     steroids = 0
 
 # Smoker ifs
-if smoker_input.upper() == "Y":
+if smoker_input.upper() == "Y":  # smoker
     smoker = 0.855
-elif Did_Smoke_input.upper() == "N":
+elif Did_Smoke_input.upper() == "N":  # non smoker
     smoker = 0
-else:
-    smoker = 0.218
+else:   # did smoke
+    smoker = -0.218
 
 # Family History Ifs:
-if history_input.upper() == 'Y':
-    family_input = input('Do any of your parents have a history of diabetes (Y/N)? ')
-    sibling_input = input('Do any of your siblings have a histroy of diabetes (Y/N)? ')
-
-if family_input.upper() == 'Y' and sibling_input == 'Y':
-    history = 0.753
-else:
-    history = 0.728
-
-if history_input.upper() == 'N':
+if history_input.upper() == 'Y':    # family history pos
+    both_input = input('Both parent and sibling (Y/N)? \n')
+    if both_input.upper() == 'Y':   # both parent and sibling
+        history = 0.753
+    elif both_input.upper() == 'N':  # parent or sibling
+        history = 0.728
+if history_input.upper() == 'N':  # no family history
     history = 0
 
 # Calculations
