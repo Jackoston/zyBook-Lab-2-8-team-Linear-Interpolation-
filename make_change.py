@@ -18,10 +18,6 @@ penny = 0
 nickel = 0
 dime = 0
 quarter = 0
-dollar = 0
-
-dollar = change//1
-change = change-dollar*1
 
 
 quarter = change//.25
@@ -37,16 +33,24 @@ penny = change//.01
 change = change-penny*.01
 
 
-if dollar != 0:
-    if dollar > 1:
-        print(dollar, "dollars")
-    else:
-        print(dollar,"dollar")
+
 if quarter != 0:
-    print(quarter,"quarter")
+    if quarter > 1:
+        print(quarter, "quarters")
+    else:
+        print(quarter,"quarter")
 if dime != 0:
-    print()
+    if dime > 1:
+        print(dime, "dimes")
+    else:
+        print(dime, "dime")
 if nickel != 0:
-    print()
+    if nickel > 1:
+        print(nickel, "nickels")
+    else:
+        print(nickel, "nickel")
 if penny != 0:
-    print()
+    if nickel > 1:
+        print(penny, "pennys")
+    else:
+        print(penny, "penny")
