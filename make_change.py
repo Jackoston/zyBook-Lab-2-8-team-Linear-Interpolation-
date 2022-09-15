@@ -38,9 +38,12 @@ change = change-penny*.01
 
 
 if dollar != 0:
-    print()
+    if dollar > 1:
+        print(dollar, "dollars")
+    else:
+        print(dollar,"dollar")
 if quarter != 0:
-    print()
+    print(quarter,"quarter")
 if dime != 0:
     print()
 if nickel != 0:
