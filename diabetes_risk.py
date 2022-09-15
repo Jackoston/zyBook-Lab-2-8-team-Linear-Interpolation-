@@ -76,5 +76,5 @@ if history_input.upper() == 'N':
 en = 6.322 + sex - (0.063 * age) - BMI - hypertension - steroids - smoker - history
 
 risk = 100 / (1 + en)
-print(f"Your risk of developing type-2 diabetes {risk:1.f}%")
+print(f"Your risk of developing type-2 diabetes {risk:.1f}%")
 
