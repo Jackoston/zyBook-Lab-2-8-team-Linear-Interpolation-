@@ -63,11 +63,10 @@ else:
 if history_input.upper() == 'Y':
     family_input = ('Do any of your parents have a history of diabetes (Y/N)? ')
     siblings_input = ('Do any of your siblings have a histroy of diabetes (Y/N)? ')
-
-if family_input.upper() == 'Y' and siblings_input == 'Y':
-    history = 0.753
-else:
-    history = 0.728
+    if family_input.upper() == 'Y' and siblings_input == 'Y':
+        history = 0.753
+    elif family_input.upper() == 'Y' or siblings_input == 'Y':
+        history = 0.728
 
 if history_input.upper() == 'N':
     history = 0
