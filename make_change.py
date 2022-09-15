@@ -40,10 +40,12 @@ quarter = change//.25
 change = change-quarter*.25
 
 dime = change//.10
-change = change-quarter*.10
+change = change-dime*.10
+
 
 nickel = change//.05
 change = change-nickel*.05
+
 
 penny = change//.01
 change = change-penny*.01
@@ -52,21 +54,21 @@ change = change-penny*.01
 
 if quarter != 0:
     if quarter > 1:
-        print(quarter, "quarters")
+        print(int(quarter), "quarters")
     else:
-        print(quarter,"quarter")
+        print(int(quarter),"quarter")
 if dime != 0:
     if dime > 1:
-        print(dime, "dimes")
+        print(int(dime), "dimes")
     else:
-        print(dime, "dime")
+        print(int(dime), "dime")
 if nickel != 0:
     if nickel > 1:
-        print(nickel, "nickels")
+        print(int(nickel), "nickels")
     else:
-        print(nickel, "nickel")
+        print(int(nickel), "nickel")
 if penny != 0:
     if nickel > 1:
-        print(penny, "pennys")
+        print(int(penny), "pennys")
     else:
-        print(penny, "penny")
+        print(int(penny), "penny")
