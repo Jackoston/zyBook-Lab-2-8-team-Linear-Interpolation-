@@ -29,6 +29,7 @@ paid = float(input('How much did you pay?'))
 price = float(input('How much did it cost?'))
 change = paid - price
 print(f'You received ${change:.2f} in change. That is...')
+change= int(change*100)
 
 penny = 0
 nickel = 0
@@ -36,19 +37,18 @@ dime = 0
 quarter = 0
 
 
-quarter = change//.25
-change = change-quarter*.25
+quarter = change//25
+change = change-quarter*25
 
-dime = change//.10
-change = change-dime*.10
-
-
-nickel = change//.05
-change = change-nickel*.05
+dime = change//10
+change = change-dime*10
 
 
-penny = change//.01
-change = change-penny*.01
+nickel = change//5
+change = change-nickel*5
+
+penny = change//1
+change = change-penny*1
 
 
 
@@ -68,7 +68,7 @@ if nickel != 0:
     else:
         print(int(nickel), "nickel")
 if penny != 0:
-    if nickel > 1:
-        print(int(penny), "pennys")
+    if penny > 1:
+        print(int(penny), "pennies")
     else:
         print(int(penny), "penny")
