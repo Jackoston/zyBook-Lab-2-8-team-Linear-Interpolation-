@@ -14,7 +14,7 @@
 # Variable inputs
 sex_input = input("Enter your sex(M/F):")
 age = int(input("Enter your age (years):"))
-BMI_input = input("Enter your BMI:")
+BMI_input = int(input("Enter your BMI:"))
 hypertension_input = input("Are you on medication for hypertension (Y/N)?")
 steroids_input = input("Are you on steroids (Y/N)?")
 smoker_input = input("Do you smoke cigarettes (Y/N)?")
@@ -73,8 +73,8 @@ if history_input.upper() == 'N':
     history = 0
 
 # Calculations
-n = 6.322 + sex - (0.063 * age) - BMI - hypertension - steroids - smoker - history
-
-
+en = 6.322 + sex - (0.063 * age) - BMI - hypertension - steroids - smoker - history
 
 risk = 100 / (1 + en)
+print(f"Your risk of developing type-2 diabetes {risk:1.f}%")
+
