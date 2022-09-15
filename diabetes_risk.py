@@ -1,4 +1,3 @@
-
 # By submitting this assignment, I agree to the following:
 # “Aggies do not lie, cheat, or steal, or tolerate those who do”
 # “I have not given or received any unauthorized aid on this assignment”
@@ -12,6 +11,7 @@
 # Date: 13 September 2022
 
 from math import e
+
 # Variable inputs
 sex_input = input("Enter your sex(M/F):")
 age = int(input("Enter your age (years):"))
@@ -59,7 +59,7 @@ elif Did_Smoke_input.upper() == "N":
     smoker = 0
 else:
     smoker = 0.218
-    
+
 # Family History Ifs:
 if history_input.upper() == 'Y':
     family_input = input('Do any of your parents have a history of diabetes (Y/N)? ')
