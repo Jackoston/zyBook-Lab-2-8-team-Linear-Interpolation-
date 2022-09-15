@@ -11,7 +11,7 @@
 # Assignment: 5.3
 # Date: 13 September 2022
 
-# Variable inputs
+# Variable Inputs:
 sex_input = input("Enter your sex(M/F):")
 age = int(input("Enter your age (years):"))
 BMI_input = input("Enter your BMI:")
@@ -21,15 +21,15 @@ smoker_input = input("Do you smoke cigarettes (Y/N)?")
 Did_Smoke_input = input("Did you used to smoke (Y/N)?")
 history_input = input("Do you have a family history of diabetes (Y/N)?")
 
-# assign variable to number for equation
+# Assign Variables w/ Number For Equation:
 
-# sex ifs
+# Sex Ifs:
 if sex_input.upper() == 'M':
     sex = 0
 elif sex_input.upper() == 'F':
     sex = 0.879
 
-# BMI ifs
+# BMI Ifs:
 if BMI_input < 25:
     BMI = 0
 elif 25 <= BMI_input < 27.5:
@@ -39,19 +39,19 @@ elif 27.5 <= BMI_input < 30:
 else:
     BMI = 2.518
 
-# Hypertension meds ifs
+# Hypertension Meds Ifs:
 if hypertension_input.upper() == 'Y':
     hypertension = 1.222
 else:
     hypertension = 0
 
-# steroid meds ifs
+# Steroid Meds Ifs:
 if steroids_input.upper() == "Y":
     steroids = 2.191
 else:
     steroids = 0
 
-# Smoker ifs
+# Smoker Ifs:
 if Did_Smoke_input.upper() == "N":
     smoke = 0
 elif smoker_input.upper() == "Y":
@@ -72,9 +72,6 @@ else:
 if history_input.upper() == 'N':
     history = 0
 
-# Calculations
+# Calculations:
 n = 6.322 + sex - (0.063 * age) - BMI - hypertension - steroids - smoker - history
-
-
-
 risk = 100 / (1 + en)
