@@ -1,16 +1,22 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+coeffA = int(input('Please enter the coefficient A: '))
+coeffB = int(input('Please enter the coefficient B: '))
+#coeffC = int(input('Please enter the coefficient C: '))
 
+if coeffA == 0:
+    water = 12
+elif coeffA == 1:
+    print('x^2 ', end=' ')
+elif coeffA > 0:
+    print(f'{coeffA}x^2', end=' ')
+elif coeffA < 0:
+    print(f'- {coeffA * -1}x^2', end=' ')
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if coeffB == 0:
+    water = 12
+elif coeffB == 1:
+    print(f'+ x', end=' ')
+elif coeffB > 0:
+    print(f'+ {coeffB}x', end=' ')
+elif coeffB < 0:
+    print(f'- {coeffB * -1}x', end=' ')
