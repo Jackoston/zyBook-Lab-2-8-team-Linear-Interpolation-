@@ -68,3 +68,10 @@ elif coeffA < 0 and coeffB < 0 and coeffC > 0:
     print(f'The quadratic equation is -{abs(coeffA)}x^2 - {abs(coeffB)}x + {coeffC} = 0')
 elif coeffA < 0 and coeffB < 0 and coeffC < 0:
     print(f'The quadratic equation is -{abs(coeffA)}x^2 - {abs(coeffB)}x - {abs(coeffC)} = 0')
+if coeffA == 0:
+
+
+elif coeffA == 1
+    print('x^2 ', end =' ')
+elif coeffA > 1
+    print(f'{coeffA}x^2', end =' ')
