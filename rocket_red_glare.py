@@ -16,17 +16,17 @@ print(a,"a")
 b = a * 7
 print(b,"b")
 
-c = 2 * a;
-d = 5 * a;
-e = c + d;
+c = 2 * a
+d = 5 * a
+e = c + d
 print(e,"e")
 
-x = sqrt(1 / 3);
-print("x =", x);
-y = x * x * 3;
-print("x*x*3 =", y);
+x = sqrt(1 / 3)
+print("x =", x)
+y = x * x * 3
+print("x*x*3 =", y)
 z = x * 3 * x;
-print("x*3*x =", z);
+print("x*3*x =", z)
 
 
 
