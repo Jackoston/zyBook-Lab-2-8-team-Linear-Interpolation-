@@ -12,12 +12,13 @@
 
 from math import sqrt
 sideL=float(input("Enter the side length in meters:"))
-layers=float(input("Enter the number of layers:"))
+layers=int(input("Enter the number of layers:"))
 
 areatotal=1
 areaPrevious=0
 areaTops=sqrt(3)/4*sideL
-for i in range(layers+1):
-    areatotal+=(sideL*layers)*sideL
+i=layers
+for i in range(1,layers+1):
+    areatotal+=3*((sideL*layers)*sideL)
     layers+1
 print(areatotal)
