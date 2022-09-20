@@ -11,3 +11,5 @@
 # Date: 15 September 2022
 sideL=int(input("Enter the side length in meters:"))
 layers=int(input("Enter the number of layers:"))
+
+for i in range(layers+1):
