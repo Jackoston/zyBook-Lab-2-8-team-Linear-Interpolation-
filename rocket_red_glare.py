@@ -58,4 +58,4 @@ else:
     print('No action required at this point.')
 # yaya now the program works, but when using e-20, the probam does not work
 # pobably because the diffrence isn't that small
-# The code stops working when e-17
+# The code stops working when e-17a
