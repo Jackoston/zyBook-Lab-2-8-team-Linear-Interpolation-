@@ -12,9 +12,9 @@
 
 
 from math import sqrt
-sideL = float(input("Enter the side length in meters: "))
-layers = int(input("Enter the number of layers: "))
-area = 0
+sideL = float(input("Enter the side length in meters: \n"))
+layers = int(input("Enter the number of layers: \n"))
+area_side = 0
 n = layers
 # range 1- given layers
 for n in range(1, layers + 1):
