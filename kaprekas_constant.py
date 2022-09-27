@@ -11,20 +11,26 @@
 # Date: 27 September 2022
 
 # input
-cars = list(input('Enter a four-digit integer: '))
-end_Number=0
-iter=0
+numList = list(input('Enter a four-digit integer: '))
+end_Number = 0
+iter = 0
+first = int("".join(numList))
+print(first, end=' > ')
 while end_Number != 6174:
 
-    iter+=1
-    cars.sort()
+    iter += 1
+    numList.sort()
 
-    asscending = "".join(cars)
+    asscending = "".join(numList)
 
-    cars.reverse()
+    numList.reverse()
 
-    dessending = ''.join(cars)
+    deccending = ''.join(numList)
 
-    end_Number = int(dessending) - int(asscending)
-    print(end_Number)
-    cars=list(str(end_Number))
+    end_Number = int(deccending) - int(asscending)
+    if end_Number != 6174:
+        print(end_Number, end=' > ')
+    else:
+        print(end_Number)
+    numList = list(str(end_Number))
+print(f"{first} reaches 6174 via Kaprekar's routine in {iter} iternations")
