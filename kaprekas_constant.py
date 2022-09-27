@@ -11,29 +11,24 @@
 # Date: 27 September 2022
 
 # input
-number = list(input('Enter a four-digit integer: '))
-integer = int(''.join())
-While int(number) != 6174:
-print(number)
-number.sort()
-smaller = number
-print(smaller)
-number.reverse()
-bigger = number
-print(bigger)
-cars = ["1", "3", "2"]
+cars = list(input('Enter a four-digit integer: '))
+end_Number=0
+iter=0
+while end_Number != 6174:
 
-cars.sort()
+    iter+=1
+    cars.sort()
 
-asscending="".join(cars)
+    asscending = "".join(cars)
 
-print(cars)
+    print(cars)
 
-cars.reverse()
+    cars.reverse()
 
-dessending=''.join(cars)
+    dessending = ''.join(cars)
 
-print(cars)
+    print(cars)
 
-end_Number=int(dessending)-int(asscending)
-print(end_Number)
+    end_Number = int(dessending) - int(asscending)
+    print(end_Number)
+    cars=list(str(end_Number))
