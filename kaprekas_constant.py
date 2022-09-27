@@ -12,4 +12,5 @@ dessending=''.join(cars)
 
 print(cars)
 
-print(int(dessending)-int(asscending))
+end_Number=int(dessending)-int(asscending)
+print(end_Number)
