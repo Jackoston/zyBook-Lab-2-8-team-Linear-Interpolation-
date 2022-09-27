@@ -12,13 +12,19 @@
 
 # input
 numList = list(input('Enter a four-digit integer: '))
+first = int("".join(numList))
+print(first, end=' > ')
+if len(numList) != 4:
+    while len(numList) != 4:
+        numList.append('0')
 ending = 6174
 end_Number = 0
 iter = 0
-first = int("".join(numList))
-print(first, end=' > ')
-while end_Number != 6174:
 
+while end_Number != 6174:
+    if len(numList) != 4:
+        while len(numList) != 4:
+            numList.append('0')
     iter += 1
     numList.sort()
 
