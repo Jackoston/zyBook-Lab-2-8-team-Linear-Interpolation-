@@ -3,7 +3,7 @@
 # “I have not given or received any unauthorized aid on this assignment”
 #
 # Names: Austin
-# Chrisopher
+# Christopher
 # Reed
 # Eddy
 # Section: 468
