@@ -21,13 +21,9 @@ while end_Number != 6174:
 
     asscending = "".join(cars)
 
-    print(cars)
-
     cars.reverse()
 
     dessending = ''.join(cars)
-
-    print(cars)
 
     end_Number = int(dessending) - int(asscending)
     print(end_Number)
