@@ -28,17 +28,15 @@ for i in range (0,10000):
                 numList.append('0')
         iter += 1
         numList.sort()
-
         asscending = "".join(numList)
-
         numList.reverse()
-
         deccending = ''.join(numList)
-
         end_Number = int(deccending) - int(asscending)
         if asscending == deccending:
             ending = 0
             end_Number = 6174
-
         numList = list(str(end_Number))
+
+
+iter-=2 #=-6 -4  -8 -1
 print(f"Kaprekar's routine takes {iter} total iterations for all four-digit numbers")
