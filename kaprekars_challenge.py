@@ -11,16 +11,16 @@
 # Date: 27 September 2022
 
 # input
+iter = 0
 for i in range (0,10000):
     numList = list(str(i))
     first = int("".join(numList))
-    print(first, end=' > ')
     if len(numList) != 4:
         while len(numList) != 4:
             numList.append('0')
     ending = 6174
     end_Number = 0
-    iter = 0
+
 
     while end_Number != 6174:
         if len(numList) != 4:
@@ -37,12 +37,8 @@ for i in range (0,10000):
 
         end_Number = int(deccending) - int(asscending)
         if asscending == deccending:
-            print('0')
             ending = 0
             end_Number = 6174
-        elif end_Number != 6174:
-            print(end_Number, end=' > ')
-        else:
-            print(end_Number)
+
         numList = list(str(end_Number))
-    print(f"{first} reaches {ending} via Kaprekar's routine in {iter} iterations")
+print(f"Kaprekar's routine takes {iter} total iterations for all four-digit numbers")
