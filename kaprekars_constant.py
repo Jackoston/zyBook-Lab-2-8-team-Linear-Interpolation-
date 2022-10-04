@@ -11,37 +11,34 @@
 # Date: 27 September 2022
 
 # input
-numList = list(input('Enter a four-digit integer: '))
-first = int("".join(numList))
-print(first, end=' > ')
-if len(numList) != 4:
-    while len(numList) != 4:
-        numList.append('0')
-ending = 6174
-end_Number = 0
 iter = 0
-
-while end_Number != 6174:
+for i in range (0,10000):
+    numList = list(str(i))
+    first = int("".join(numList))
     if len(numList) != 4:
         while len(numList) != 4:
             numList.append('0')
-    iter += 1
-    numList.sort()
+    ending = 6174
+    end_Number = 0
 
-    asscending = "".join(numList)
 
-    numList.reverse()
+    while end_Number != 6174:
+        if len(numList) != 4:
+            while len(numList) != 4:
+                numList.append('0')
+        iter += 1
+        numList.sort()
 
-    deccending = ''.join(numList)
+        asscending = "".join(numList)
 
-    end_Number = int(deccending) - int(asscending)
-    if asscending == deccending:
-        print('0')
-        ending = 0
-        end_Number = 6174
-    elif end_Number != 6174:
-        print(end_Number, end=' > ')
-    else:
-        print(end_Number)
-    numList = list(str(end_Number))
-print(f"{first} reaches {ending} via Kaprekar's routine in {iter} iterations")
+        numList.reverse()
+
+        deccending = ''.join(numList)
+
+        end_Number = int(deccending) - int(asscending)
+        if asscending == deccending:
+            ending = 0
+            end_Number = 6174
+
+        numList = list(str(end_Number))
+print(f"Kaprekar's routine takes {iter} total iterations for all four-digit numbers")
