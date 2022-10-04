@@ -20,3 +20,4 @@ while want_Stop!="Y":
         #whites turn
     else:
         #blacks turn
+    turn_number+=1
