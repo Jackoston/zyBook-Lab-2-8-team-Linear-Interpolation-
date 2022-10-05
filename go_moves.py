@@ -90,3 +90,5 @@ while want_Stop!="Y":
         for i in board[r]:
             print("\t",i, end=" ")  # prints out the columns
         print()
+
+#omg you found a funny little mesae , good for you, count to three and ill through a cabage at you
