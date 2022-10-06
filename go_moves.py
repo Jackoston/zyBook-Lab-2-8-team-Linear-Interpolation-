@@ -10,6 +10,21 @@
 # Assignment: Lab: Your Checkered Past
 # Date: 6 October 2022
 
+print("-----------------------------------RULES OF THE GAME------------------------------------------")
+print("At the beginning of the game the board must be bare.\n"
+      "Black must start the game then followed by white and then back to\n"
+      "black and so on. To make a move, one must place their stone on an empty\n"
+      "intersection on the board. A connected group of stones can be captured when\n"
+      "all intersections adjacent to the group are occupied by the opposing color.\n"
+      "Capture of an enemy will always take prescedence over self capture. In addition\n"
+      "to capturing an opponents stones it is also possible to score by surrounding an\n"
+      "empty space with stones of all your color. A stone may never be placed with the intention\n"
+      "to recreate a former position. Two consectuive passes will end the game. In short,\n"
+      "the player with more area will win. To calculate the final score each opponent will\n"
+      "each player will  count the number of unoccupied points that are bordered by all of their\n"
+      "colored stones and then the player will subtract the number of their stones that were\n"
+      "taken by their opponent. The player with the greater score will be declared winner.")
+print("-----------------------------------------------------------------------------------------------")
 
 rowA=["A",".",".",".",".",".",".",".",".","."]
 rowB=["B",".",".",".",".",".",".",".",".","."]
