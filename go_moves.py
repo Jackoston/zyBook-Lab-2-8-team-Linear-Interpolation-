@@ -7,8 +7,8 @@
 # Reed
 # Eddy
 # Section: 468
-# Assignment: Lab: Your Checkered Past
-# Date: 6 October 2022
+# Assignment: Lab: Your Stony Past
+# Date: 06 October 2022
 
 print("-----------------------------------RULES OF THE GAME------------------------------------------")
 print("At the beginning of the game the board must be bare.\n"
@@ -41,13 +41,13 @@ for r in range(len(board)): #this are the rows
     for i in board[r]:
         print("\t",i,end=" ") #prints out the columns
     print()
-want_Stop=input("stop? (Y/N)").upper()
+want_Stop=input("stop? (Y/N)").upper()  #This is where it is asked at the beginning of a turn if the game is to end.
 turn_number=0
 valid= True
-while want_Stop!="Y":
-    if turn_number%2==0:
+while want_Stop!="Y":   #Game will continue until the user wants to stop the game
+    if turn_number%2==0:    #This if statement will run if it is whites turn
         print("White turn !!\n")
-        Wrow=input("what coordinate row do you want (ex: A,B,C)").upper()
+        Wrow=input("what coordinate row do you want (ex: A,B,C)").upper()   #This askes the user where they would like their stone placed
         Wcol=int(input("what coordinate col do you want (ex: 1)"))
         if(Wrow=="A"):
             WrowNum=0
@@ -73,14 +73,14 @@ while want_Stop!="Y":
         if Wcol>9 or Wcol==0:
             valid = False
             print("Not valid column")
-        if(valid) and board[WrowNum][Wcol]==".":
+        if(valid) and board[WrowNum][Wcol]==".":    #This will place a point as long as the spot is not already occupied
             board[WrowNum][Wcol]=chr(9679)
         else:
-            print("Spot filled or invalid coordinate")
+            print("Spot filled or invalid coordinate")  #If the spot is not legal, this will be displayed.
             turn_number-=1
     else:
-        print("Black turn !!!?\n")
-        Wrow=input("what coordinate row do you want (ex: A,B,C)").upper()
+        print("Black turn !!!?\n")  #This statement will run if it is balcks turn
+        Wrow=input("what coordinate row do you want (ex: A,B,C)").upper()   #These statements ask the user where they want their stone placed
         Wcol=int(input("what coordinate col do you want (ex: 1)"))
         if(Wrow=="A"):
             WrowNum=0
@@ -106,7 +106,7 @@ while want_Stop!="Y":
         if Wcol>9 or Wcol==0:
             valid = False
             print("Not valid column")
-        if(valid)and board[WrowNum][Wcol]==".":
+        if(valid)and board[WrowNum][Wcol]==".": #If the spot selected is a legal spot to play a stone will be placed
             board[WrowNum][Wcol]=chr(9675)
         else:
             print("Spot filled or invalid coordinate")
@@ -118,7 +118,6 @@ while want_Stop!="Y":
         for i in board[r]:
             print("\t",i, end=" ")  # prints out the columns
         print()
-    want_Stop = input("stop? (Y/N)").upper()
+    want_Stop = input("stop? (Y/N)").upper()    #This will continue to ask the users if they want the game to stop or continues
 
 print("what a great game")
-#omg you found a funny little mesae , good for you, count to three and ill through a cabage at you
