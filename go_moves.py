@@ -1,3 +1,16 @@
+# By submitting this assignment, I agree to the following:
+# “Aggies do not lie, cheat, or steal, or tolerate those who do”
+# “I have not given or received any unauthorized aid on this assignment”
+#
+# Names: Austin
+# Christopher
+# Reed
+# Eddy
+# Section: 468
+# Assignment: Lab: Your Checkered Past
+# Date: 6 October 2022
+
+
 rowA=["A",".",".",".",".",".",".",".",".","."]
 rowB=["B",".",".",".",".",".",".",".",".","."]
 rowC=["C",".",".",".",".",".",".",".",".","."]
@@ -19,7 +32,7 @@ valid= True
 while want_Stop!="Y":
     if turn_number%2==0:
         print("White turn !!\n")
-        Wrow=input("what coordinate row do you want (ex: A)").upper()
+        Wrow=input("what coordinate row do you want (ex: A,B,C)").upper()
         Wcol=int(input("what coordinate col do you want (ex: 1)"))
         if(Wrow=="A"):
             WrowNum=0
@@ -52,7 +65,7 @@ while want_Stop!="Y":
             turn_number-=1
     else:
         print("Black turn !!!?\n")
-        Wrow=input("what coordinate row do you want (ex: A)").upper()
+        Wrow=input("what coordinate row do you want (ex: A,B,C)").upper()
         Wcol=int(input("what coordinate col do you want (ex: 1)"))
         if(Wrow=="A"):
             WrowNum=0
@@ -90,5 +103,7 @@ while want_Stop!="Y":
         for i in board[r]:
             print("\t",i, end=" ")  # prints out the columns
         print()
+    want_Stop = input("stop? (Y/N)").upper()
 
+print("what a great game")
 #omg you found a funny little mesae , good for you, count to three and ill through a cabage at you
