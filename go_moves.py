@@ -20,7 +20,7 @@ rowF=["F",".",".",".",".",".",".",".",".","."]
 rowG=["G",".",".",".",".",".",".",".",".","."]
 rowH=["H",".",".",".",".",".",".",".",".","."]
 rowI=["I",".",".",".",".",".",".",".",".","."]
-board=[rowA,rowB,rowC,rowD,rowF,rowG,rowF]
+board=[rowA,rowB,rowC,rowD,rowE,rowF,rowG, rowH, rowI]
 print("\t\t 1\t 2\t 3\t 4\t 5\t 6\t 7\t 8\t 9")
 for r in range(len(board)): #this are the rows
     for i in board[r]:

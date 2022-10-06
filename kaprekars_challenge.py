@@ -12,7 +12,7 @@
 
 # input
 iter = 0
-for i in range (0,10000):
+for i in range (0, 10000):
     numList = list(str(i))
     first = int("".join(numList))
     if len(numList) != 4:
