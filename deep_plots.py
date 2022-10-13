@@ -70,7 +70,7 @@ arrow_properties = {
     'headlength': 5,
     'width': 1
 }
-plt.annotate("It's closest here!", xy=(1.35, .25), xytext = (1.2, 0.1), arrowprops=arrow_properties)
+plt.annotate("It's closest here!", xy = (1.35, 0.25), xytext = (1.2, 0.1), arrowprops = arrow_properties)
 plt.ylim(0, .5)
 plt.xlim(1, 2)
 
