@@ -12,11 +12,11 @@
 
 # Import:
 import matplotlib.pyplot as plt
-fig = plt.figure('Frodo likes this.')
+fig = plt.figure('Frodo likes this')
 from math import e
 
 # t & y Values:
-t5 = [0, 0.45, 1.1, 1.75, 2.25, 2.7]
+x = [0, 0.45, 1.1, 1.75, 2.25, 2.7]
 y = [0, 0.23, 0.4, 0.18, 0.07, 0.01]
 
 # Line Calculation:
@@ -25,8 +25,6 @@ t_list = []
 for t in range(150):
     t /= 50
     t_list.append(t)
-print(t_list)
-
 
 # Dot Calculation:
 # y(t) = t^2 exp(-t^2)
@@ -43,27 +41,29 @@ for t in t_list:
     fun2_list.append(fun2)
 print(fun2_list)
 
-# Plots:
+# 1st Plot:
 plt.subplot(2, 1, 1)
-plt.plot(t5, y, 'ko', label='data')
-plt.plot(t_list, fun1_list, 'r-',  label='t^2*exp(–t^2)')
-plt.plot(t_list, fun2_list, 'b-', label='t^4*exp(–t^2)')
-plt.legend(loc='upper right')
 plt.title('Data and two curves vs. time')
 plt.xlabel('time')
 plt.ylabel('y')
-plt.ylim(-.03, 1, .25)
-plt.xlim(0, 3)
-
-# second plot
-plt.subplot(2, 1, 2)
-plt.plot(t_list, fun1_list, 'b-',  label='t^2*exp(–t^2)')
-plt.plot(t5, y, 'y-')
-plt.plot(t5, y, 'y^', label='data')
+plt.plot(x, y, 'ko', label='data')
+plt.plot(t_list, fun1_list, 'r-',  label = 't^2*exp(-t^2)')
+plt.plot(t_list, fun2_list, 'b-', label = 't^4*exp(-t^2)')
 plt.legend(loc='upper right')
+plt.xlim(0, 2.9)
+plt.ylim(-.05, 1.1)
+
+# 2nd Plot:
+plt.subplot(2, 1, 2)
 plt.title('Data interpolation and Curve 1')
 plt.xlabel('time')
 plt.ylabel('y')
+plt.plot(x, y, 'y^', label = 'data')
+plt.plot(x, y, 'y-')
+plt.plot(t_list, fun1_list, 'b-',  label='t^2*exp(-t^2)')
+plt.legend(loc='upper right')
+plt.xlim(1, 2)
+plt.ylim(0, 0.5)
 arrow_properties = {
     'facecolor': 'black',
     'shrink': 0.0,
@@ -74,7 +74,6 @@ plt.annotate("It's closest here!", xy=(1.35, .25), xytext = (1.2, 0.1), arrowpro
 plt.ylim(0, .5)
 plt.xlim(1, 2)
 
-
-# Plot Print:
+# Plot Show:
 plt.tight_layout()
 plt.show()
