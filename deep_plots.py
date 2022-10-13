@@ -44,9 +44,11 @@ print(fun2_list)
 
 # Plots:
 plt.subplot(2, 1, 1)
-plt.plot(t5, y, 'ko')
-plt.plot(t_list, fun1_list)
-plt.plot(t_list, fun2_list)
+plt.plot(t5, y, 'ko', label='data')
+plt.plot(t_list, fun1_list, 'r-',  label='function 1')
+plt.plot(t_list, fun2_list, 'b-', label='function 2')
+plt.legend(loc='upper right')
+
 
 plt.subplot(2, 1, 2)
 plt.plot(t_list, fun2_list)
