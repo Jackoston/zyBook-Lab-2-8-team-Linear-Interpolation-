@@ -12,6 +12,7 @@
 
 # Import:
 import matplotlib.pyplot as plt
+fig = plt.figure('Frodo likes this.')
 from math import e
 
 # t & y Values:
@@ -45,13 +46,35 @@ print(fun2_list)
 # Plots:
 plt.subplot(2, 1, 1)
 plt.plot(t5, y, 'ko', label='data')
-plt.plot(t_list, fun1_list, 'r-',  label='function 1')
-plt.plot(t_list, fun2_list, 'b-', label='function 2')
+plt.plot(t_list, fun1_list, 'r-',  label='t^2*exp(–t^2)')
+plt.plot(t_list, fun2_list, 'b-', label='t^4*exp(–t^2)')
 plt.legend(loc='upper right')
+plt.title('Data and two curves vs. time')
+plt.xlabel('time')
+plt.ylabel('y')
+plt.ylim(-.03, 1, .25)
+plt.xlim(0, 3)
 
-
+# second plot
 plt.subplot(2, 1, 2)
-plt.plot(t_list, fun2_list)
+plt.plot(t_list, fun1_list, 'b-',  label='t^2*exp(–t^2)')
+plt.plot(t5, y, 'y-')
+plt.plot(t5, y, 'y^', label='data')
+plt.legend(loc='upper right')
+plt.title('Data interpolation and Curve 1')
+plt.xlabel('time')
+plt.ylabel('y')
+arrow_properties = {
+    'facecolor': 'black',
+    'shrink': 0.0,
+    'headlength': 5,
+    'width': 1
+}
+plt.annotate("It's closest here!", xy=(1.35, .25), xytext = (1.2, 0.1), arrowprops=arrow_properties)
+plt.ylim(0, .5)
+plt.xlim(1, 2)
+
 
 # Plot Print:
+plt.tight_layout()
 plt.show()
