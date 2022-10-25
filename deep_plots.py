@@ -33,13 +33,13 @@ fun1_list = []
 for t in t_list:
     fun1 = [(t ** 2) * (e ** (-t ** 2))]
     fun1_list.append(fun1)
-print(fun1_list)
+
 
 fun2_list = []
 for t in t_list:
     fun2 = [(t ** 4) * (e ** (-t ** 2))]
     fun2_list.append(fun2)
-print(fun2_list)
+
 
 # 1st Plot:
 plt.subplot(2, 1, 1)
