@@ -22,11 +22,24 @@ def getpoints(nums):
     return listxy
 
 
+def cross(point1, point2):
+    pos = point1[0] * point2[1]
+    neg = point1[1] * point2[0]
+    cross_product = pos - neg
+    return cross_product
 
 
+def shoelace(list_of_points):
+    area = 0
+    for i in range(len(list_of_points) - 1):
+        area += cross(list_of_points[i], list_of_points[i + 1])
+    area += cross(list_of_points[-1], list_of_points[0])
+    return area
 
-# main code
-point_int = input('Please enter the vertices: ')
 
+if __name__ == '__main__':
+    point_int = input('Please enter the vertices: ')
 
-print(getpoints(point_int))
+    list_of_values = getpoints(point_int)
+    final_area = shoelace(list_of_values)
+    print(final_area / 2)
