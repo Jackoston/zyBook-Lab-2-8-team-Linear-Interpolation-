@@ -41,5 +41,5 @@ if __name__ == '__main__':
     point_int = input('Please enter the vertices: ')
 
     list_of_values = getpoints(point_int)
-    final_area = shoelace(list_of_values)
-    print(final_area / 2)
+    final_area = shoelace(list_of_values) / 2
+    print(f'The area of the polygon is {final_area:.1f}')

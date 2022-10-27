@@ -12,8 +12,8 @@
 
 # Import:
 import matplotlib.pyplot as plt
-fig = plt.figure('Frodo likes this')
 from math import e
+fig = plt.figure('Frodo likes this')
 
 # t & y Values:
 x = [0, 0.45, 1.1, 1.75, 2.25, 2.7]
