@@ -11,6 +11,7 @@
 # Date: 25 October 2022
 
 
+# change points into list
 def getpoints(nums):
     list1 = nums.split()
     listxy = []
@@ -22,6 +23,7 @@ def getpoints(nums):
     return listxy
 
 
+# finding cross product
 def cross(point1, point2):
     pos = point1[0] * point2[1]
     neg = point1[1] * point2[0]
@@ -29,17 +31,24 @@ def cross(point1, point2):
     return cross_product
 
 
+# adding up the area
 def shoelace(list_of_points):
     area = 0
     for i in range(len(list_of_points) - 1):
         area += cross(list_of_points[i], list_of_points[i + 1])
     area += cross(list_of_points[-1], list_of_points[0])
-    return area
+    return area / 2
 
 
-if __name__ == '__main__':
+# main code function
+def main():
     point_int = input('Please enter the vertices: ')
 
     list_of_values = getpoints(point_int)
-    final_area = shoelace(list_of_values) / 2
+    final_area = shoelace(list_of_values)
     print(f'The area of the polygon is {final_area:.1f}')
+
+
+# zybook check thing
+if __name__ == '__main__':
+    main()
