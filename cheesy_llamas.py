@@ -33,7 +33,16 @@ def write_input(x_list, y_list, v):
         Function writes into nailedit.txt file the values, formatted as required in problem statement. """
 
     # ---- WRITE HEADER AND X-Y VALUES TO EXTERNAL FILE ----
-    pass # <-- replace this with your code
+    with open('nailed_it.txt', 'w') as nailedIt:
+        nailedIt.write('-------------------------------------------------------------')
+        nailedIt.write('"Yellow Bandits" with Austin Ingalls, Christopher Snell, Reed'
+                       'Kallus, Eddy Diaz\n')
+        nailedIt.write('Nov. 3rd, 2022\n')
+        nailedIt.write('\n')
+        nailedIt.write('x_values = time, y_values = kilograms of cheese consumed'
+                       'by llamas')
+        nailedIt.write('-------------------------------------------------------------')
+        nailedIt.write()
 
 
 
