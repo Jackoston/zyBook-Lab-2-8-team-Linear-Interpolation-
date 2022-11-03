@@ -92,8 +92,17 @@ def print_to_file(x, y, t):
         Function writes to file the x, corresponding y, and whether it was interpolated or extrapolated.
         return: (none) """
 
-    # ---- WRITE X-Y VALUES AND ESTIMATION TYPE TO EXTERNAL FILE ----
-    pass # <-- replace this with your code
+    # ---- WRITE X-Y VALUES AND ESTIMATION TYPE TO EXTERNAL FILE ---
+    with open('nailed_it.txt', 'w') as nailedIt:
+        nailedIt.write('-------------------------------------------------------------')
+        nailedIt.write('"Yellow Bandits" with Austin Ingalls, Christopher Snell, Reed'
+                       'Kallus, Eddy Diaz\n')
+        nailedIt.write('Nov. 3rd, 2022\n')
+        nailedIt.write('\n')
+        nailedIt.write('x_values = time, y_values = kilograms of cheese consumed'
+                       'by llamas')
+        nailedIt.write('-------------------------------------------------------------')
+        nailedIt.write()
 
 
 #########################################################################
