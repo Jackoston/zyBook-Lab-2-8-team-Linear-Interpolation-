@@ -11,6 +11,8 @@
 # Assignment:   Lab Cheesy Llamas
 # Date:         3 November 2022
 
+# Program that takes arbitrary x, y data pairs, then calculates linear interpolation / extrapolation for any x
+
 def get_user_data():
     """ Parameters: (none)
         Function asks user to type in an x then a corresponding y. If user types 'q', it exits. The values are added
@@ -34,16 +36,16 @@ def write_input(x_list, y_list, v):
 
     # ---- WRITE HEADER AND X-Y VALUES TO EXTERNAL FILE ----
     with open('nailed_it.txt', 'w') as nailedIt:
-        nailedIt.write('-------------------------------------------------------------')
-        nailedIt.write('"Yellow Bandits" with Austin Ingalls, Christopher Snell, Reed'
+        nailedIt.write('-------------------------------------------------------------\n')
+        nailedIt.write('"Yellow Bandits" with Austin Ingalls, Christopher Snell, Reed \n'
                        'Kallus, Eddy Diaz\n')
         nailedIt.write('Nov. 3rd, 2022\n')
         nailedIt.write('\n')
-        nailedIt.write('x_values = time, y_values = kilograms of cheese consumed'
-                       'by llamas')
-        nailedIt.write('-------------------------------------------------------------')
-        nailedIt.write()
-
+        nailedIt.write(f'x_values = time, y_values = {v} \n')
+        nailedIt.write('-------------------------------------------------------------\n')
+        for i in range(len(x_list)):
+            nailedIt.write(f'{int(x_list[i])}, {int(y_list[i])}\n')
+        nailedIt.write('-------------------------------------------------------------\n')
 
 
 def reorder_lists(x_list, y_list):
@@ -101,18 +103,9 @@ def print_to_file(x, y, t):
         Function writes to file the x, corresponding y, and whether it was interpolated or extrapolated.
         return: (none) """
 
-    # ---- WRITE X-Y VALUES AND ESTIMATION TYPE TO EXTERNAL FILE ---
-    with open('nailed_it.txt', 'w') as nailedIt:
-        nailedIt.write('-------------------------------------------------------------')
-        nailedIt.write('"Yellow Bandits" with Austin Ingalls, Christopher Snell, Reed'
-                       'Kallus, Eddy Diaz\n')
-        nailedIt.write('Nov. 3rd, 2022\n')
-        nailedIt.write('\n')
-        nailedIt.write('x_values = time, y_values = kilograms of cheese consumed'
-                       'by llamas')
-        nailedIt.write('-------------------------------------------------------------')
-        nailedIt.write()
-
+    # ---- WRITE X-Y VALUES AND ESTIMATION TYPE TO EXTERNAL FILE ----
+    with open('nailed_it.txt', 'a') as nailedIt:
+        nailedIt.write(f'{x}, {y:.1f} \t {t}\n')
 
 #########################################################################
 # ----------------------------- MAIN CODE ----------------------------- #
@@ -132,7 +125,7 @@ x_val = input("Enter an x value ('q' to quit): ")
 while x_val != 'q':
     x_val_float = float(x_val)
 
-    # Determine if y-value needs to be extrapolated or interpoled
+    # Determine if y-value needs to be extrapolated or interpolated
     if x_val_float < ordered_x[0] or x_val_float > ordered_x[-1]:
         y_val, y_type = extrapolate(ordered_x, ordered_y, x_val_float)
     else:
