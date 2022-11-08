@@ -9,3 +9,8 @@
 # Section:      468
 # Assignment:   10 - 13 Debugged Code
 # Date:         Nov. 1st, 2022
+
+datFile = open('scanned_passports.txt', 'r', newline='')
+passports = []
+passports = datFile.split('\n\n')
+print(passports)
