@@ -11,6 +11,9 @@
 # Date:         Nov. 1st, 2022
 
 datFile = open('scanned_passports.txt', 'r', newline='')
-passports = []
-passports = datFile.split('\n\n')
+passports = datFile.read().split('\r\n\r')
+
+datFile.close()
+
+print("wow\n\r\nwow")
 print(passports)
