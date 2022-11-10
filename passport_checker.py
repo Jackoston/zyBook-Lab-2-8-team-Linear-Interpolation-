@@ -41,4 +41,3 @@ for y in range(len(validList1)):
     except ValueError:
         print(validList1[y])
         print(y)
-
