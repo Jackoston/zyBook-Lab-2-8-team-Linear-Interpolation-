@@ -10,6 +10,7 @@
 # Assignment:   10 - 13 Debugged Code
 # Date:         Nov. 1st, 2022
 
+userInput = input('Enter the name of the file: ')
 datFile = open('scanned_passports.txt', 'r', newline='')
 passports = datFile.read().split('\r\n\r')
 
