@@ -13,7 +13,6 @@
 userInput = input('Enter the name of the file: ')
 datFile = open(userInput, 'r', newline='')
 passports = datFile.read().split('\r\n\r')
-
 datFile.close()
 
 
