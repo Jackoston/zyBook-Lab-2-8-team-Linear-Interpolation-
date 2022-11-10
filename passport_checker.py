@@ -15,8 +15,8 @@ passports = datFile.read().split('\r\n\r')
 
 datFile.close()
 
-print("wow\n\r\nwow")
-print(passports)
+
+
 validList1=[]
 hclCount=0
 for i in range(len(passports)):
@@ -30,14 +30,21 @@ for i in range(len(passports)):
         if len(passports[i].split())==7:
             validList1.append(passports[i].split())
 
-print(len(validList1))
-print(hclCount)
+total_val_pass = open('valid_passports.txt', 'w')
 validList1.sort() #24 and 47 dont have hcl
+tot_val = 0
 for g in range(len(validList1)):
     validList1[g].sort()
 for y in range(len(validList1)):
     try:
         validList1[y][4].index("hcl")
+        total_val_pass.write(f'{str(validList1[y])}\n')
+        tot_val += 1
     except ValueError:
-        print(validList1[y])
-        print(y)
+        if "hgt" in validList1[y][4]:
+            total_val_pass.write(f'{str(validList1[y])}\n')
+            tot_val +=1
+        else:
+            continue
+
+print(f'There are {tot_val} valid passports')
