@@ -18,16 +18,16 @@ passportFile.close()
 
 # File Writer:
 validCount = 0
-with open('valid_passports.txt', 'w', newline='') as validPassports:
+with open('valid_passports.txt', 'w', newline='') as validPassport:
     for i in range(len(passport)):
         try:
             passport[i].index('hcl')
             if len(passport[i].split()) == 8:
-                validPassports.write(f'{passport[i]}\n')
+                validPassport.write(f'{passport[i]}\n')
                 validCount += 1
         except ValueError:
             if len(passport[i].split()) == 7:
-                validPassports.write(f'{passport[i]}\n')
+                validPassport.write(f'{passport[i]}\n')
                 validCount += 1
 
 # Print:
