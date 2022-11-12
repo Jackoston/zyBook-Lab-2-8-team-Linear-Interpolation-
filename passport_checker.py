@@ -13,21 +13,21 @@
 # User Input:
 userInput = input('Enter the name of the file: ')
 passportFile = open(userInput, 'r', newline='')
-passports = passportFile.read().split('\r\n\r')
+passport = passportFile.read().split('\r\n\r')
 passportFile.close()
 
 # File Writer:
 validCount = 0
-with open('valid_passports.txt', 'w') as validPassports:
-    for i in range(len(passports)):
+with open('valid_passports.txt', 'w', newline='') as validPassports:
+    for i in range(len(passport)):
         try:
-            passports[i].index('hcl')
-            if len(passports[i].split()) == 8:
-                validPassports.write(f'{passports[i]}')
+            passport[i].index('hcl')
+            if len(passport[i].split()) == 8:
+                validPassports.write(f'{passport[i]}\n')
                 validCount += 1
         except ValueError:
-            if len(passports[i].split()) == 7:
-                validPassports.write(f'{passports[i]}')
+            if len(passport[i].split()) == 7:
+                validPassports.write(f'{passport[i]}\n')
                 validCount += 1
 
 # Print:
