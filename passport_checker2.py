@@ -85,12 +85,16 @@ for thing in value_person:
 print(f'There are {len(valid_passports)} valid passports')
 writing_passports = []
 
+# put string of passport in a list writing_passports
+# check for valid PID in the string
 for passport in passports:
     for thing in valid_passports:
         if thing[-1] in passport:
             writing_passports.append(passport)
 
 writing_passports[0] = writing_passports[0].lstrip()
+
+# write string of passport into file with a \n
 validFile = open('valid_passports2.txt', 'w', newline='')
 for passport in writing_passports:
     validFile.write(f'{passport}\n')

@@ -23,6 +23,8 @@ with open('valid_passports.txt', 'w', newline='') as validPassport:
         try:
             passport[i].index('hcl')
             if len(passport[i].split()) == 8:
+                if validCount == 0:
+                    passport[i] = passport[i].lstrip()
                 validPassport.write(f'{passport[i]}\n')
                 validCount += 1
         except ValueError:
