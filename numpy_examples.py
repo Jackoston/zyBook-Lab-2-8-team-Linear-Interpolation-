@@ -14,7 +14,6 @@
 # tutorial, and each team member understands the material
 
 import numpy as np
-from math import sqrt
 
 array_a = np.arange(12).reshape(3, 4)
 print(f'A = {array_a}')
@@ -39,5 +38,7 @@ print('')
 array_dt = array_d.T
 print(f'D^T = {array_dt}')
 
-array_e = sqrt(array_d) / 2
+print('')
+
+array_e = np.sqrt(array_d) / 2
 print(f'E = {array_e}')
