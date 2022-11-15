@@ -98,4 +98,3 @@ writing_passports[0] = writing_passports[0].lstrip()
 validFile = open('valid_passports2.txt', 'w', newline='')
 for passport in writing_passports:
     validFile.write(f'{passport}\n')
-
