@@ -19,21 +19,35 @@ def trajectory():
 
 
 def bird_picker():
-    bird_input = input('Red = red, small bird; Chuck = yellow, small bird; Bomb = black, large bird; Terence = red, large bird: ')
-
+   bird_type = {'Red': 'red, small bird',
+            'Chuck': 'yellow, small bird',
+            'Bomb': 'black, large bird',
+            'Terence': 'red, large bird'
+            }
+   while True:
+      print('Birds: Red = red, small bird; Chuck = yellow, small bird; Bomb = black, large bird; Terence = red, large bird')
+      bird = input('Pick a bird: ')
+      if bird in bird_type:
+         return bird_type[bird]
+      else:
+         print('Bad Input')
 
 
 def planet_picker():
-    gravity = {'Earth': 9.807, 'Mars': 3.711, 'Moon': 1.625, 'Jupiter':24.79}
-    while True:
-        print('Planets: Earth = 9.807 m/s2, Mars = 3.711 m/s2, Moon = 1.625 m/s2, Jupiter = 24.79 m/s2')
-        planet = input('Pick a planet: ')
-        if planet in gravity:
-            return gravity[planet]
-        else:
-            print('Bad input')
+   gravity = {'Earth': 9.807,
+              'Mars': 3.711,
+              'Moon': 1.625,
+              'Jupiter': 24.79
+              }
+   while True:
+      print('Planets: Earth = 9.807 m/s2, Mars = 3.711 m/s2, Moon = 1.625 m/s2, Jupiter = 24.79 m/s2')
+      planet = input('Pick a planet: ')
+      if planet in gravity:
+         return gravity[planet]
+      else:
+         print('Bad input')
 
-
+            
 def get_guesses():
     velocity = float(input('Enter velocity (m/s): '))
     angle = float(input('Enter angle (degrees): '))
