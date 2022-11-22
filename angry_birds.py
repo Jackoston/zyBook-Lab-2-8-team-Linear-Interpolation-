@@ -3,6 +3,7 @@
 
 import random
 from math import radians, tan, cos
+import matplotlib.pyplot as plt
 
 # -------------------------------------- FUNCTION DEFINITIONS---------------------------------------
 # (Then put any function definitions; I've done a couple already!—don't change mine.)
@@ -14,15 +15,22 @@ def trajectory_y(x, g, vo, angle):
     return (x*tan(angle))-(g*x**2)/(2*(vo**2)*cos(angle)**2)
 
 
-def trajectory():
-    # work
+def trajectory(gravity, velocity, angle):
+    x_vals = []
+    y_vals = []
+    for x in range(1001):
+        x_vals.append(x)
+    for x in x_vals:
+        y = trajectory_y(x, gravity, velocity, angle)
+        y_vals.append(y)
+    return x_vals, y_vals
 
 
 def bird_picker():
-   bird_type = {'Red': 'red, small bird',
-            'Chuck': 'yellow, small bird',
-            'Bomb': 'black, large bird',
-            'Terence': 'red, large bird'
+   bird_type = {'Red': 'r,s',
+            'Chuck': 'y,s',
+            'Bomb': 'k,l',
+            'Terence': 'r,l'
             }
    while True:
       print('Birds: Red = red, small bird; Chuck = yellow, small bird; Bomb = black, large bird; Terence = red, large bird')
@@ -54,7 +62,7 @@ def get_guesses():
     return velocity, angle
 
 
-def  bird_plot():
+def  bird_plot(x_vals, y_vals, hit_point, color_size):
     # work
 
 
