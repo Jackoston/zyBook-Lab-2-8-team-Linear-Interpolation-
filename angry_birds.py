@@ -70,7 +70,7 @@ def birds_plot(x_vals, y_vals, target, bird, hit=False):
     if hit:
         plt.plot(target[0], target[1], 'rx', markeredgewidth=20)
     else:
-        plt.plot(target[0], target[1], 'go', markersize=target[-1]/2)
+        plt.plot(target[0], target[1], 'o', color='limegreen', markersize=target[-1]/2)
 
     plt.plot(x_vals, y_vals, f'{bird[0]}--', linewidth=size)
     plt.show()
