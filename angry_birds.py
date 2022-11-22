@@ -62,14 +62,28 @@ def get_guesses():
     return velocity, angle
 
 
-def birds_plot(x, y, target, bird, True):
-   plt.plot(bird)
-   plt.plot(x, y, '--')
-   plt.plot(target)
+def birds_plot(x_vals, y_vals, target, bird, hit=False):
+    if bird[-1] == 's':
+        size = 2
+    else:
+        size = 5
+    if hit:
+        plt.plot(target[0], target[1], 'rx', markeredgewidth=20)
+    else:
+        plt.plot(target[0], target[1], 'go', markersize=target[-1]/2)
+
+    plt.plot(x_vals, y_vals, f'{bird[0]}--', linewidth=size)
+    plt.show()
 
 
-def hit():
-    # work
+def hit(x_vals, y_vals, target):
+    TOL = 5
+    x = int(target[0])
+    y = y_vals[x+1]
+    if target[1] - TOL <= y <= target[1] + TOL:
+        return True
+    else:
+        return False
 
 
 def get_basics():
@@ -90,7 +104,7 @@ while again == 'y':
 
     # Program will pick a random distance (x from 10-1000), height (y from 0-50) and size of a target
     target = (random.randint(10, 1000), random.randint(0, 50), random.randint(10, 50))
-
+    print(target)
     # Takes initial guesses
     bird, g = get_basics()                           # Runs fn to get bird and planet information
     v_guess, theta_guess = get_guesses()             # Runs fn to get velocity and angle guesses
