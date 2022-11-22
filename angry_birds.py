@@ -62,8 +62,10 @@ def get_guesses():
     return velocity, angle
 
 
-def  bird_plot(x_vals, y_vals, hit_point, color_size):
-    # work
+def birds_plot(x, y, target, bird, True):
+   plt.plot(bird)
+   plt.plot(x, y, '--')
+   plt.plot(target)
 
 
 def hit():
