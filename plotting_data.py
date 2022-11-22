@@ -46,6 +46,7 @@ avg_windspeed_plt1y = []
 for day in days:
     avg_windspeed_plt1y.append(float(day[1]))
 
+# need left and right axis
 fig, left_axis = plt.subplots()
 right_axis = left_axis.twinx()
 
@@ -57,6 +58,7 @@ left_axis.set_ylabel('Maximum Temperature, F')
 right_axis.plot(day_num_plt1x, avg_windspeed_plt1y, 'b-', label='Avg Wind')
 right_axis.set_ylabel('Average wind speed, mph')
 
+# manual set the legend
 fig.legend(loc='lower left', bbox_to_anchor=(0.11, 0.13))
 plt.title('Maximum Temperature and Average Wind Speed')
 plt.tight_layout()
@@ -72,6 +74,8 @@ days_y_plt2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 for i in range(len(wind_speed_x)):
     for windspeed in avg_windspeed:
         try:
+            # find which 2 values the wind speed is between
+            # then find the closer value and add 1 for day
             if wind_speed_x[i] <= windspeed <= wind_speed_x[i+1]:
                 diff1 = windspeed - wind_speed_x[i]
                 diff2 = (windspeed - wind_speed_x[i+1]) * -1
@@ -104,6 +108,7 @@ plt.ylabel('Average Wind Speed, mph')
 plt.show()
 
 # plot 4
+# x axis and make a list for everything :(
 plt4x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 temp_min_jan = []
 temp_max_jan = []
@@ -193,6 +198,7 @@ for day in days:
         temp_min_dec.append(int(day[-1]))
         temp_avg_dec.append(int(day[3]))
 
+# find max temp for every month
 max_month_temp = []
 max_month_temp.append(max(temp_max_jan))
 max_month_temp.append(max(temp_max_feb))
@@ -207,6 +213,7 @@ max_month_temp.append(max(temp_max_oct))
 max_month_temp.append(max(temp_max_nvb))
 max_month_temp.append(max(temp_max_dec))
 
+# find min temp for every month
 min_month_temp = []
 min_month_temp.append(min(temp_min_jan))
 min_month_temp.append(min(temp_min_feb))
@@ -221,6 +228,7 @@ min_month_temp.append(min(temp_min_oct))
 min_month_temp.append(min(temp_min_nvb))
 min_month_temp.append(min(temp_min_dec))
 
+# find average temp for every month
 avg_temp_month = []
 avg_temp_month.append(sum(temp_avg_jan)/len(temp_max_jan))
 avg_temp_month.append(sum(temp_avg_feb)/len(temp_max_feb))
@@ -235,6 +243,7 @@ avg_temp_month.append(sum(temp_avg_oct)/len(temp_max_oct))
 avg_temp_month.append(sum(temp_avg_nvb)/len(temp_max_nvb))
 avg_temp_month.append(sum(temp_avg_dec)/len(temp_max_dec))
 
+# plot max, min, and avg
 plt.plot(plt4x, max_month_temp, 'r-', label='High T')
 plt.plot(plt4x, min_month_temp, 'b-', label='Low T')
 plt.bar(plt4x, avg_temp_month, color='orange')
