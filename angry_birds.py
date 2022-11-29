@@ -73,6 +73,7 @@ def birds_plot(x_vals, y_vals, target, bird, hit=False):
         plt.plot(target[0], target[1], 'o', color='limegreen', markersize=target[-1]/2)
 
     plt.plot(x_vals, y_vals, f'{bird[0]}--', linewidth=size)
+    plt.ylim(-2)
     plt.show()
 
 
